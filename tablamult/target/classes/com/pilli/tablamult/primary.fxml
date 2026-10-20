@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="15.0" 
+      xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.pilli.tablamult.PrimaryController">
+   <children>
+     
+      <HBox alignment="CENTER" spacing="15.0">
+         <children>
+            <Label text="Tabla del:" />
+            <TextField fx:id="txtNumero" promptText="5" prefWidth="60.0" alignment="CENTER" />
+            
+            <VBox spacing="8.0">
+               <children>
+                  <Button fx:id="btnCalcular" text="Calcular" onAction="#btnCalcular_click" prefWidth="80.0" />
+                  <Button fx:id="btnLimpiar" text="Limpiar" onAction="#btnLimpiar_click" prefWidth="80.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+     
+      <TextArea fx:id="txtResultado" editable="false" prefWidth="200.0" prefHeight="200.0" 
+                style="-fx-font-family: monospace; -fx-font-size: 14px;" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
