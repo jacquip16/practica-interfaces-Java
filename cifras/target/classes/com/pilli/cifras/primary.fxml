@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="15.0" 
+      xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.pilli.cifras.PrimaryController">
+   <children>
+      
+      <HBox alignment="CENTER" spacing="15.0">
+         <children>
+            <Label text="Ingrese un número" />
+            <TextField fx:id="txtNumero" promptText="6915" prefWidth="120.0" />
+            <Button fx:id="btnAnalizar" text="Analizar" onAction="#btnAnalizar_click" />
+            <Button fx:id="btnLimpiar" text="Limpiar" onAction="#btnLimpiar_click" />
+         </children>
+      </HBox>
+      
+  
+      <HBox alignment="CENTER" spacing="30.0">
+         <children>
+            <!-- Panel Izquierdo: Resultados organizados -->
+            <GridPane hgap="10.0" vgap="8.0" alignment="CENTER_LEFT">
+               <children>
+                  <Label text="Cantidad de cifras" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                  <TextField fx:id="txtCantCifras" editable="false" prefWidth="80.0" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                  
+                  <Label text="Suma de cifras impares" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                  <TextField fx:id="txtSumaImpares" editable="false" prefWidth="80.0" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                  
+                  <Label text="Suma de cifras pares" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                  <TextField fx:id="txtSumaPares" editable="false" prefWidth="80.0" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                  
+                  <Label text="Suma total de cifras" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                  <TextField fx:id="txtSumaTotal" editable="false" prefWidth="80.0" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                  
+                  <Label text="Cifra mayor" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                  <TextField fx:id="txtCifraMayor" editable="false" prefWidth="80.0" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+                  
+                  <Label text="Cifra menor" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+                  <TextField fx:id="txtCifraMenor" editable="false" prefWidth="80.0" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            
+           
+            <VBox alignment="TOP_LEFT" spacing="5.0">
+               <children>
+                  <Label text="Divisores" style="-fx-font-weight: bold;" />
+                  <TextArea fx:id="txtDivisores" editable="false" prefWidth="150.0" prefHeight="180.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

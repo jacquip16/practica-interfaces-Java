@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="15.0" 
+      xmlns="http://javafx.com/javafx/8.0.171" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.pilli.desglosedinero.PrimaryController">
+   <children>
+      <!-- Fila superior: Dinero, Campo de texto, Botón X, Botón Desglosar -->
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Label text="Dinero:" />
+            <TextField fx:id="txtDinero" promptText="9999" prefWidth="100.0" alignment="CENTER_RIGHT" />
+            <Button fx:id="btnBorrar" text="Borrar" onAction="#btnBorrar_click" />
+            <Button fx:id="btnDesglosar" text="Desglosar" onAction="#btnDesglosar_click" />
+         </children>
+      </HBox>
+      
+      <HBox alignment="CENTER" spacing="20.0">
+         <children>
+            
+            <VBox alignment="TOP_RIGHT" spacing="5.0">
+               <children>
+                  <Label text="Billetes de $500" />
+                  <Label text="Billetes de $200" />
+                  <Label text="Billetes de $100" />
+                  <Label text="Billetes de $50" />
+                  <Label text="Billetes de $20" />
+                  <Label text="Monedas de $10" />
+                  <Label text="Monedas de $5" />
+                  <Label text="Monedas de $2" />
+                  <Label text="Monedas de $1" />
+               </children>
+            </VBox>
+            
+            
+            <VBox alignment="TOP_CENTER" spacing="5.0">
+               <children>
+                  <Label fx:id="lbl500" text="0" />
+                  <Label fx:id="lbl200" text="0" />
+                  <Label fx:id="lbl100" text="0" />
+                  <Label fx:id="lbl50" text="0" />
+                  <Label fx:id="lbl20" text="0" />
+                  <Label fx:id="lbl10" text="0" />
+                  <Label fx:id="lbl5" text="0" />
+                  <Label fx:id="lbl2" text="0" />
+                  <Label fx:id="lbl1" text="0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
